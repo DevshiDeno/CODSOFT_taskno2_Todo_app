@@ -264,7 +264,7 @@ class _HomeScreenState extends State<HomeScreen>
                                                                   context)
                                                                   .size
                                                                   .width *
-                                                                  0.25,
+                                                                  0.2,
                                                             ),
 
                                                             Checkbox(
@@ -415,8 +415,7 @@ class _HomeScreenState extends State<HomeScreen>
                                                           width: MediaQuery.of(
                                                               context)
                                                               .size
-                                                              .width *
-                                                              0.9,
+                                                              .width,
                                                           height: 20,
                                                           child: Row(
                                                             children: [
