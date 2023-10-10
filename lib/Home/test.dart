@@ -22,8 +22,8 @@ class _NewTaskState extends State<NewTask> {
   final _formKey = GlobalKey<FormState>();
   bool importantChecked = false; // Separate variable for "Important"
   bool notImportantChecked = false; // Separate variable for "Not Important"
-  DateTime? selectedDate; // Provide a default date
-  TimeOfDay? selectedTime; // Define a variable to store the selected date
+  DateTime? selectedDate=DateTime.now(); // Provide a default date
+  TimeOfDay? selectedTime=TimeOfDay.now(); // Define a variable to store the selected date
   //List<Task> createdTask = [];
 
   @override
@@ -214,7 +214,7 @@ class _NewTaskState extends State<NewTask> {
                                                 picked != selectedDate) {
                                               setState(() {
                                                 selectedDate = picked;
-                                                dateController.text = DateFormat("dd/MM/yy").format(selectedDate);
+                                                dateController.text = DateFormat("dd/MM/yy").format(selectedDate!);
                                               });
                                             }
                                           },
@@ -257,6 +257,7 @@ class _NewTaskState extends State<NewTask> {
                                                 timePicked != selectedTime) {
                                               setState(() {
                                                 selectedTime = timePicked;
+                                                timeController.text = selectedTime!.format(context);
                                               });
                                             }
                                           },

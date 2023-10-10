@@ -98,8 +98,7 @@ class _HomeScreenState extends State<HomeScreen>
                     onDaySelected: (selectedDay, focusedDay) {
                       setState(() {
                         _selectedDay = selectedDay;
-                        _focusedDay =
-                            focusedDay; // update `_focusedDay` here as well
+                        _focusedDay = focusedDay; // update `_focusedDay` here as well
                       });
                     },
                     onPageChanged: (focusedDay) {
@@ -122,7 +121,7 @@ class _HomeScreenState extends State<HomeScreen>
             Stack(children: [
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height * 0.51,
+                height: MediaQuery.of(context).size.height * 0.56,
                 child: TabBarView(
                   controller: _tabController,
                   children: [
@@ -265,7 +264,7 @@ class _HomeScreenState extends State<HomeScreen>
                                                                   context)
                                                                   .size
                                                                   .width *
-                                                                  0.4,
+                                                                  0.25,
                                                             ),
 
                                                             Checkbox(
@@ -433,7 +432,7 @@ class _HomeScreenState extends State<HomeScreen>
                                                                     context)
                                                                     .size
                                                                     .width *
-                                                                    0.4,                                                              ),
+                                                                    0.2,                                                              ),
                                                               Text(
                                                                 tasks.IsCompleted ? "Completed" : "",
                                                                 style: TextStyle(
@@ -478,7 +477,7 @@ class _HomeScreenState extends State<HomeScreen>
                 ),
               ),
             ),
-            SizedBox(height: 20)
+            SizedBox(height: 5)
           ],
         ),
     );
